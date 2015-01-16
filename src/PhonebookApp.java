@@ -8,27 +8,8 @@ public class PhonebookApp {
 	private static Set<String> keys;
 	
 	
-	public static void printPhonebook(){
-		Iterator<String> keyIterator = keys.iterator();
-		while( keyIterator.hasNext() ){
-			String key = keyIterator.next();
-			Iterator<Integer> valueIterator = phonebook.get(key).getPhoneNumbers().iterator();
-			System.out.println("Name: " + key);
-			while(valueIterator.hasNext()){
-				System.out.print( "\tPhone numbers: " +valueIterator.next() + "\n" );
-			}
-			System.out.println();
-		}
-	}
-	
-	public static void addNewPerson(String name, int number){
-		phonebook.put(name, new Person(name, number));
-	}
-	
-	
-	
 	public static void main(String[] args) {
-		phonebook = new HashMap<String, Person>();
+		Phonebook phonebook = new Phonebook();
 		keys = phonebook.keySet();
 		
 		Person vedad = new Person("Vedad Zornic", 61929253);

@@ -30,4 +30,9 @@ public class Phonebook {
 		phonebook.put(name, new Person(name, number));
 	}
 	
+	public static void removePerson(String name){
+		keys.remove(name);
+	}
+	
+	
 }
