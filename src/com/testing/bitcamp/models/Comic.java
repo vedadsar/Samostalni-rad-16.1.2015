@@ -2,13 +2,13 @@ package com.testing.bitcamp.models;
 
 public class Comic extends Model {
 	
-	protected int [] intText;
+	protected Integer [] intText;
 
-	public int[] getIntText() {
+	public Integer[] getIntText() {
 		return intText;
 	}
 
-	public void setIntText(int[] intText) {
+	public void setIntText(Integer[] intText) {
 		this.intText = intText;
 	}
 		

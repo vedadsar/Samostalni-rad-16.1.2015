@@ -5,7 +5,7 @@ public class MachineBook {
 	protected String autor;
 	protected int pages;
 	protected int numOfChars;
-	protected int [] text;
+	protected String [] text;
 	
 	
 	public String getName() {
@@ -32,10 +32,10 @@ public class MachineBook {
 	public void setNumOfChars(int numOfChars) {
 		this.numOfChars = numOfChars;
 	}
-	public int[] getText() {
+	public String[] getText() {
 		return text;
 	}
-	public void setText(int[] text) {
+	public void setText(String[] text) {
 		this.text = text;
 	}	
 }

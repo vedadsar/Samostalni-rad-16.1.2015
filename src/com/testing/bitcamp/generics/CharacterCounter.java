@@ -4,38 +4,52 @@ import com.testing.bitcamp.models.Book;
 import com.testing.bitcamp.models.MachineBook;
 
 public class CharacterCounter {
-	
-	public static<T> void count(T[] var){
+
+	public static <T> int count(T[] var) {
 		int counter = 0;
-		for(T k: var){
+		for (T k : var) {
 			counter++;
 		}
-		System.out.println(counter);
+		return counter;
 	}
+
 	
-	public static int countWords(String[] array){
-		
+	
+	public static int countWords(String[] array) {
+		return 0;
+
 	}
-	
+
 	public static void main(String[] args) {
 		Book b = new Book();
 		b.setAutor("Vladimir Arsenijevic");
 		b.setName("Predator");
 		b.setPages(555);
-		b.setText(new String[] {"A", "B", "C", "D","E"});
-		
-		int p = count(b.getText());
-		System.out.println(p);
-		
+		b.setText(new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+
+		System.out.println(count(b.getText()));
+
 		System.out.println("--------------");
-		
+
 		MachineBook m = new MachineBook();
 		m.setAutor("Vladimir Arsenijevic");
 		m.setName("Predator");
 		m.setPages(555);
-		m.setText(new int[]{1 ,24, 13, 4, 5, 55, 64, 64});
+		m.setText(new String[] { "1", "24", "13", "4", "5" });
 		
-		
+		// System.out.println(count(m.getText()));
 		System.out.println(count(m.getText()));
+		System.out.println("--------------");
+		Book[] books = new Book[]{new Book(), new Book(), new Book()};
+		System.out.println(count(books));
+		System.out.println("--------------");
+		GenericClass<Integer> gc = new GenericClass<Integer>();
+		gc.add(new Integer[]{12,22,33,44,55,66});
+		System.out.println(count(gc.get()));
+		
+		GenericClass<Character> gv = new GenericClass<Character>();
+		Character [] vedad = new Character[] {'V', 'E', 'D', 'A', 'D'};
+		gv.add(vedad);
+		System.out.println(count(gv.get()));
 	}
 }

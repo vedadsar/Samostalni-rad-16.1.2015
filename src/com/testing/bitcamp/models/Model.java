@@ -5,14 +5,14 @@ public class Model {
 	protected String autor;
 	protected int pages;
 	protected int numOfChars;
-	protected String[] text;
+	protected Integer[] text;
 	
 	
 	
-	public String[] getText() {
+	public Integer[] getText() {
 		return text;
 	}
-	public void setText(String[] text) {
+	public void setText(Integer[] text) {
 		this.text = text;
 	}
 	public String getName() {
